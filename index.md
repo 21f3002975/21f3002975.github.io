@@ -129,7 +129,7 @@ But now, let’s count the same thing a different way.
 
 Let’s decide **how many people to pick from Group A** and how many from Group B. Suppose we pick **j people from Group A**. Then, we must pick **k - j people from Group B** to reach k total.
 
-  - Number of ways to choose j people from Group A: $\binom{m}{j}$
+  - Number of ways to choose j people from Group A: \( \binom{m}{j} \)
   - Number of ways to choose k - j people from Group B: $\binom{n}{k - j}$
 
 

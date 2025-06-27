@@ -9,22 +9,22 @@ mathjax: true
 ## The Story of Counting: From Pebbles to Probability
 
 Long before equations, calculators, or even written language, humans were counting.
-
+<br>
 Imagine a shepherd, thousands of years ago, watching over his flock in the fading light of dusk. With no numerals or notations, he dropped a pebble into a pouch for every sheep that wandered past his hut at night. The next morning, he poured the pebbles out and, one by one, matched them to the sheep leaving the pen. If one pebble remained, he knew a sheep was missing. This wasn’t math as we think of it—but it was counting in its most primal form: a method to track, compare, and reason.
-
+<br>
 Over time, fingers gave way to tally marks etched on bones and stones. As trade and civilizations grew, so did the complexity of counting. The Egyptians tracked harvests, the Babylonians devised base-60 counting systems, and merchants used tokens and abacuses to track inventories and debts.
-
+<br>
 But counting wasn’t just about keeping track. It became a tool for exploring possibilities.
 
 ### The Rise of Structured Counting
 
-In ancient India and the Islamic Golden Age, scholars began to ask deeper questions:  
+At the turn of the first millennium, scholars began to ask deeper questions:  
 *“In how many ways can you arrange objects?”*  
 *“What happens if repetitions are allowed?”*  
 These questions gave birth to early theories of permutations and combinations— the building blocks of what we now call combinatorics.
-
-Centuries later, in 17th-century Europe, minds like Blaise Pascal and Pierre de Fermat formalized counting in the context of uncertainty. Their letters back and forth laid the foundation for probability theory—a revolutionary idea that chance could be measured, predicted, and even calculated.
-
+<br>
+Centuries later, in 1700s Europe, minds like Blaise Pascal and Pierre de Fermat formalized counting in the context of uncertainty. Their letters back and forth laid the foundation for probability theory—a revolutionary idea that chance could be measured, predicted, and even calculated.
+<br>
 Counting, once a shepherd’s survival skill, had become a scientific discipline.
 
 ### From Enlightenment to Algorithms
@@ -34,28 +34,15 @@ As the world entered the era of reason and then computation, counting evolved ag
 - Generating functions to encode sequences
 - Partitions to explore sums of integers
 - Set theory and group theory to analyze symmetry and structure
-
+<br>
 In the 20th and 21st centuries, counting took on new forms through statistical physics and computer science. Combinatorics now powers everything from quantum state calculations to AI search algorithms, from data compression to genome sequencing.
 
-### Why Counting Still Matters
-
-Today, counting helps us:
-
-- Compute probabilities  
-- Analyze algorithms  
-- Model uncertainty  
-- Optimize decisions  
-- Understand patterns in nature, code, and chaos  
-
-It’s no longer just about how many sheep are in a field—but how many ways those sheep can be arranged, selected, encoded, or predicted.
-
-Counting is no longer just arithmetic. It’s a language—one we use to describe the possible, the probable, and the profound.
 ---
 
 ## Counting, Probabilities and Uncertainity
 
 As counting matured into a mathematical discipline, it became a foundation for understanding uncertainty—giving rise to the fields of probability and statistics. Before we can assign probabilities to outcomes or reason about randomness, we must first know how to count the possible arrangements or selections that underlie those outcomes. 
-
+<br>
 In **probability**, counting provides a way to calculate the likelihood of events. Probabilities are defined as ratios:
 
 $$
@@ -64,27 +51,19 @@ $$
 
 This simple formula relies entirely on accurate counting. Whether you're computing the odds of drawing a full house in poker or determining the chance of flipping 3 heads in 5 coin tosses, counting is indispensable. As problems get more complex, so does the need for structured counting models.
 
-### Counting outcomes of multiple events
-
-We saw previously that the chance of getting a favourable outcome is dependent on the number of outcomes in the set of favourable outcomes and the number of elements in the set of possible outcomes. But how do we count the number of outcomes in each set?
-For a single event, it is easy to count the number of outcomes. If you flip a coin, you get two possible outcomes, heads and tails. If you roll a die, there are six numbers which might come up.
-But what if you flip 10 coins or roll 10 dice? How many possible outcomes are there? And if you are betting on the result, how many of those outcomes will give you a win?
-
-Things get difficult and confusing when we get to counting the number of outcomes of multiple combined events – but not to worry, we will explain the methods below.
-
 ### Order and Replacement
 
 Before we begin counting, we must ask ourselves the question: What exactly are we counting? More specifically, we are concerned with
-
-1) Order - Are we counting simply the number of combinations of outcomes or their arrangements as well? 
+<br>
+- **Order** - Are we counting simply the number of combinations of outcomes or their arrangements as well? 
 Consider **flipping two coins**, is there a difference between the outcomes **(tails, heads) and (heads, tails)**? If order matters then they are not the same.
 
-2) Replacement – Does choosing an item remove it from future selections, or is it still available? Does it affect the possible outcomes of subsequent events? 
-
+- **Replacement** – Does choosing an item remove it from future selections, or is it still available? Does it affect the possible outcomes of subsequent events? 
+<br>
 Imagine you're selecting a **book to read from a digital library app** that has 3 featured books on the homepage. Each time you open the app, you're allowed to choose one of the books to read for a while and then return it. Since the books are digital and nothing is physically removed from the collection, you can choose the same book again later. This is a situation with **replacement**—each selection doesn't change the set of available options for the next round.
-
+<br>
 Compare that to a physical book fair, where if you pick a book and take it home, it's no longer on the shelf. The remaining options shrink after each selection—that's **without replacement**.
-
+<br>
 Answering these two questions on order and repitition yields 4 separate categories of counting problems,
 
 
@@ -106,7 +85,7 @@ When faced with a complex-looking combinatorial identity, it’s tempting to div
 ### What is a Story Proof?
 
 A story proof doesn’t rely on manipulating symbols. Instead, it relies on **understanding what the expression actually counts**, and then telling a different “story” that counts the same thing in another way.
-
+<br>
 At its heart, a story proof answers the question:
 > *Can I interpret both sides of this identity as counting the same thing, but from different perspectives?*
 
@@ -147,7 +126,7 @@ Let’s decide **how many people to pick from Group A** and how many from Group 
 - Number of ways to choose k - j people from Group B: \(\binom{n}{k - j}\)
 
 Now sum over all possible values of j (from 0 to k), and you’ve accounted for **every way to form a k-person committee from two groups**, by considering all possible combinations of contributions from Group A and B.
-
+<br>
 That’s exactly what the **left-hand side** is doing:
 
 $$
@@ -162,7 +141,7 @@ Algebraically, proving this identity is messy—it requires manipulating binomia
 - Intuitive
 
 And most importantly, it shows *why* the identity is true—not just *that* it is.
-
+<br>
 Story proofs like this are a central technique in combinatorics because they link **counting** to **context**. They turn numbers into narratives—and in doing so, reveal patterns that algebra alone might hide.
 
 ---
@@ -214,11 +193,11 @@ Now generalize this argument for k positions with n choices for each position. W
 
 Below is a simulation for illustration, go ahead tinker with it.
 
-<br><br>
+<br>
 
 <iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
-<br><br>
+<br>
 
 #### ii. Story Proof
 Imagine setting a 4-digit password. Each digit (slot) has 10 options (0-9), regardless of earlier choices. Total = \( 10^4 = 10,000 \).

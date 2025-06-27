@@ -38,6 +38,7 @@ As the world entered the era of reason and then computation, counting evolved ag
 
 In the 20th and 21st centuries, counting took on new forms through statistical physics and computer science. Combinatorics now powers everything from quantum state calculations to AI search algorithms, from data compression to genome sequencing.
 <br><br>
+
 ---
 
 ## Counting, Probabilities and Uncertainity
@@ -78,6 +79,7 @@ Answering these two questions on order and repitition yields 4 separate categori
 
 Prior to getting into each coutjing problem and its solutions, let us take a quick detour and learn a powerful tool to solve coutning problems in general. This is particularly useful in combinatorics. It is called the **Story Proof** !
 <br><br>
+
 ---
 
 ## The Power of Story Proofs in Counting
@@ -160,8 +162,10 @@ Now let us get back to the main focus of our article.
 ## The Big Four
 
 Thus far, we have seen that answering these two questions, helps us categorize the counting problems into 4 sub-categories.
-- **Does order matter?**
-- **Are repetitions allowed?** (Replacement)
+<ul style="margin-left: 2em;">
+  <li><strong> Does order matter? </strong></li>
+  <li><strong> Are repetitions allowed? (Replacement) </strong></li>
+</ul>
 
 And the solutions to these **four counting problems**are as follows:
 
@@ -173,6 +177,7 @@ And the solutions to these **four counting problems**are as follows:
 Where:
 - \( n \) = total number of distinct items
 - \( k \) = number of selections
+<br><br>
 
 ---
 
@@ -180,7 +185,7 @@ Where:
 
 We building the algebric solutions for each counting problem, we will use story proofs where required.
 
-Imagine, you have downloaded a new app and it requires that you set a 4 digit PIN. In how many ways can you do it. For simplicity, let us restrict the options to these 10 digits : $0,1,2, \ldots,8, 9$. 
+Imagine, you have downloaded a new app and it requires that you set a 4 digit PIN. In how many ways can you do it. For simplicity, let us restrict the options to these 10 digits : $0, 1, 2, \ldots, 9$. 
 
 But before starting to solve it, spend a minute thinking of those two questions - **1) Does order matter? 2) Are repititions allowed?** The answer to the first one is yes order matters. In case of the latter, it usually depends on the application. In some case they may restrict repitition. In our case let us assume that repitition is allowed. And this takes us to our first category of counting problems.
 
@@ -190,16 +195,16 @@ But before starting to solve it, spend a minute thinking of those two questions 
 
 #### Solution : <span>\( n^k \)</span>
 
-Going back to our password example. We have 4 positions to fill from 10 choices ($0,1,2, \ldots,8, 9$) and we can look at the choice for each position as an individual event with 10 different outcomes(corresponding to the 10 digits). 
+Going back to our password example. We have 4 positions to fill from 10 choices $(0, 1, 2, \ldots, 9)$ and we can look at the choice for each position as an individual event with 10 different outcomes(corresponding to the 10 digits). 
 - For position 1, we can thus count 10 possible outcomes.
 - What about for position 2? As our choice for position 1 is not consumed, we can choose the same digit again – or we can choose a different digit. We still have 10 possible outcomes – and we count these 10 outcomes for each different outcome from position 1.
-
+<br><br>
 We can now write the overall $10 * 10$ ways of making a choice. Continuting this we get $10^4 = 10,000$ choices for the 4 digit PIN. 
 <br><br>
 Now generalize this argument for k positions with n choices for each position. We are choosing \( k \) items from \( n \), and every item can be chosen again.
 
  - Each of the \( k \) positions has \( n \) choices
- - $ n \times n \times \cdots \times n = n^k $
+ - \( n \times n \times \cdots \times n = n^k \)
 
 Below is a simulation for illustration, go ahead tinker with it.
 

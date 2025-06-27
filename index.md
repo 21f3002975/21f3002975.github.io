@@ -41,25 +41,31 @@ In the 20th and 21st centuries, counting took on new forms through statistical p
 
 ---
 
-
 ## Notation
 
 Before we dive into counting techniques, here’s a quick reference for some standard mathematical notations used throughout this page:
 
-- **Factorial**:  
-  \( n! = n \times (n - 1) \times (n - 2) \times \cdots \times 1 \)  
-  *Said as “n factorial”*. It represents the number of ways to arrange \( n \) distinct items in order.
+<ul>
+  <li>
+    <strong>Factorial</strong>:  
+    \( n! = n \times (n - 1) \times (n - 2) \times \cdots \times 1 \)  
+    <br><em>Said as “n factorial”.</em> It represents the number of ways to arrange \( n \) distinct items in order.
+  </li>
+  <li>
+    <strong>Permutations</strong>:  
+    \( {}^nP_r = \dfrac{n!}{(n - r)!} \)  
+    <br><em>Said as “n permute r”.</em> It counts the number of ordered arrangements of \( r \) items chosen from \( n \) distinct options.
+  </li>
+  <li>
+    <strong>Combinations</strong>:  
+    \( {}^nC_r = \dfrac{n!}{r!(n - r)!} \quad \text{or} \quad \binom{n}{r} \)  
+    <br><em>Both are said as “n choose r”.</em> This gives the number of ways to choose \( r \) items from \( n \) distinct options <strong>when order does not matter</strong>.
+  </li>
+</ul>
 
-- **Permutations**:  
-  \( {}^nP_r = \dfrac{n!}{(n - r)!} \)  
-  *Said as “n permute r”*. It counts the number of ordered arrangements of \( r \) items chosen from \( n \) distinct options.
-
-- **Combinations**:  
-  \( {}^nC_r = \dfrac{n!}{r!(n - r)!} \quad \text{or} \quad \binom{n}{r} \)  
-  *Both are said as “n choose r”*. This gives the number of ways to choose \( r \) items from \( n \) distinct options **when order does not matter**.
+<br><br>
 
   --- 
-  <br><br>
 
 ## Counting, Probabilities and Uncertainity
 

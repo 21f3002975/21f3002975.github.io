@@ -114,7 +114,8 @@ Where:
 We are choosing \( k \) items from \( n \), and every item can be chosen again.
 Each of the \( k \) positions has \( n \) choices.
 $$ n \times n \times \cdots \times n = n^k $$
-[Ordered with Replacement](visualizations/ordered-replacement.html)
+<iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+
 
 #### ii. Story Proof
 Imagine setting a 4-digit password. Each digit (slot) has 10 options (0-9), regardless of earlier choices. Total = \( 10^4 = 10,000 \).

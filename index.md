@@ -266,16 +266,79 @@ $$ P(n, k) $$ is the count of such injective mappings.
 ---
 
 ### 3. **Unordered with Replacement**
-#### i. Algebraic Derivation
 
-We are selecting \( k \) items from \( n \), with repetition and no order. This is equivalent to placing \( k \) indistinguishable balls into \( n \) distinguishable boxes.
-- Using "stars and bars":
-$$ \binom{n + k - 1}{k} $$
+The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \(n \) choices, when order does not matter and replacement is allowed?
 
-#### ii. Story Proof
-Choose 3 scoops of ice cream (from 5 flavors), flavors can repeat, order doesn’t matter. E.g., (Vanilla, Vanilla, Chocolate).
-This becomes a question of how many ways to assign 3 indistinct scoops to 5 flavor types.
+**Note : This is a significantly more difficult to intuitively understand compared to the other 3 sub-categories of counting problems and we will see why**
 
+### Unordered Selection with Replacement: The Stars and Bars Perspective
+
+Suppose we want to choose \( k \) items from a set of \( n \) distinct items. This time, we are allowed to **repeat selections** (replacement is allowed), but **we don’t care about the order** in which the items are chosen.
+
+This situation might sound tricky at first, but there's a very helpful way to visualize it: using **stars and bins** (also called the **stars and bars** method).
+
+---
+
+#### A Different Way to Think About It
+
+Instead of thinking about *choosing items*, imagine we are **distributing \( k \) identical stars into \( n \) distinct bins**.
+
+- Each **star** represents one selection.
+- Each **bin** represents one of the \( n \) available items.
+- Since we can place multiple stars in the same bin, we're allowing **repetition** (i.e., selection with replacement).
+- Since the stars are identical, we’re only interested in **how many stars end up in each bin**, not the order they were placed — making this an **unordered** model.
+
+This reframes our problem as:
+> In how many ways can we place \( k \) identical stars into \( n \) labeled bins?
+
+---
+
+#### Stars and Bars: The Trick
+
+To solve this, we can imagine arranging all the stars in a line, and then inserting **dividers (bars)** to split them into bins.
+
+- We have \( k \) stars.
+- To divide them into \( n \) bins, we need \( n - 1 \) bars.
+- So we are arranging \( k + (n - 1) = n + k - 1 \) symbols in total — a mixture of stars and bars.
+
+Each unique arrangement of these \( n + k - 1 \) symbols represents a valid way to distribute the stars into bins.
+
+---
+
+#### The Counting Step
+
+Now comes the clever part:  
+To count the number of such arrangements, we simply need to **choose \( k \) positions for the stars** (or equivalently, \( n - 1 \) positions for the bars) from the \( n + k - 1 \) available slots.
+
+$$
+\text{Number of ways} = \binom{n + k - 1}{k}
+$$
+
+This is the total number of ways to choose \( k \) items from \( n \) types, **with replacement** and **without considering order**.
+
+---
+
+#### Real-World Analogy
+
+Imagine you have \$100 that you want to break into bills of certain denominations: \$50, \$20, \$10, and \$5. Your goal is to find out **how many different ways** you can split the \$100 using any number of these bills — as long as the total is exactly \$100.
+
+Here, each **denomination** (\$50, \$20, \$10, \$5) acts like a **bin** (or category), and each time you choose a bill, you're placing a **star** into that bin.
+
+- You can choose the same denomination multiple times — just like **replacement** in our model.
+- You don’t care about the **order** in which the bills are chosen — only **how many** of each you end up with.
+
+This is exactly the kind of problem stars and bars was designed for:  
+> You are distributing a fixed number of identical items (dollar value in this case) across a fixed set of labeled categories (bill types), allowing repeats, and ignoring order.
+
+If we translate this into math: you're counting how many integer solutions exist to an equation like:
+
+$$
+50x + 20y + 10z + 5w = 100
+$$
+
+under the constraint that \( x, y, z, w \geq 0 \) and are integers. This is a **partitioning problem**, and while solving it exactly involves a bit more than stars and bars (because of coefficients), the underlying **counting structure** is very similar: you're **placing indistinct units (stars) into labeled bins (bill types), with repetition and without caring about order**.
+
+<br><br>
 <iframe src="/visualizations/unordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 #### iii. Double Counting

@@ -239,7 +239,6 @@ Below is a simulation for illustration, go ahead tinker with it.
 
 <iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
----
 
 ### 2. **Ordered without Replacement**
 
@@ -255,10 +254,12 @@ So that total options will be \( n \times (n-1) \times \ldots (n-k+1) \). Multip
 $$ 
 P(n, k) = \frac{n!}{(n - k)!} 
 $$
+
+Below is a simulation for illustration, go ahead tinker with it.
+
 <br><br>
 <iframe src="/visualizations/ordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
----
 
 ### 3. **Unordered with Replacement**
 
@@ -321,13 +322,14 @@ $$
 
 under the constraint that \( x, y, z, w \geq 0 \) and are integers. This is a **partitioning problem**, and while solving it exactly involves a bit more than stars and bars (because of coefficients), the underlying **counting structure** is very similar: you're **placing indistinct units (stars) into labeled bins (bill types), with repetition and without caring about order**.
 
+Below is a simulation for illustration, go ahead tinker with it.
+
 <br><br>
 <iframe src="/visualizations/unordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
----
-
 
 ### 4. **Unordered without Replacement**
+
 #### i. Algebraic Proof
 We want to select \( k \) distinct items, order doesn’t matter:
 $$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
@@ -335,12 +337,11 @@ $$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
 #### ii. Story Proof
 Forming a committee of 3 people from a group of 10. The group members have no roles or ranks.
 
+Below is a simulation for illustration, go ahead tinker with it.
+
+<br><br>
 <iframe src="/visualizations/unordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
-#### iii. Double Counting
-Count permutations first: $$\frac{n!}{(n-k)!} $$, then divide by $$ k! $$ to account for ordering: $$ \text{Permutations} \div \text{orderings} = \frac{n!}{k!(n-k)!} $$
-
----
 
 ## Parting Thoughts
 

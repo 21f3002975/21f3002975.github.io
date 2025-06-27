@@ -125,8 +125,10 @@ But now, let’s count the same thing a different way.
 
 Let’s decide **how many people to pick from Group A** and how many from Group B. Suppose we pick **j people from Group A**. Then, we must pick **k - j people from Group B** to reach k total.
 
-&nbsp;&nbsp;&nbsp;&nbsp;• Number of ways to choose j people from Group A: $\binom{m}{j}$
-&nbsp;&nbsp;&nbsp;&nbsp;• Number of ways to choose k - j people from Group B: $\binom{n}{k - j}$
+<ul style="margin-left: 2em;">
+  <li>Number of ways to choose j people from Group A: $\binom{m}{j}$ </li>
+  <li>Number of ways to choose k - j people from Group B: $\binom{n}{k - j}</li>
+</ul>
 
 Now sum over all possible values of j (from 0 to k), and you’ve accounted for **every way to form a k-person committee from two groups**, by considering all possible combinations of contributions from Group A and B.
 <br><br>
@@ -139,10 +141,11 @@ $$
 ### Why This Matters
 
 Algebraically, proving this identity is messy—it requires manipulating binomial coefficients and careful bookkeeping. But the story proof is:
-
-&nbsp;&nbsp;&nbsp;&nbsp;• Clean  
-&nbsp;&nbsp;&nbsp;&nbsp;• Visual  
-&nbsp;&nbsp;&nbsp;&nbsp;• Intuitive
+<ul style="margin-left: 2em;">
+  <li>Clean </li>
+  <li>Visual</li>
+  <li>Intuitive</li>
+</ul>
 
 And most importantly, it shows *why* the identity is true—not just *that* it is.
 <br><br>
@@ -183,25 +186,25 @@ But before starting to solve it, spend a minute thinking of those two questions 
 
 **The standard way of phrasing this set of counting problems is : in how many ways can I choose $k$ items from $n$ choices, when order matters and replacement is allowed?**
 
-#### Solution : $ n^k $
+#### Solution : <span>$ n^k $</span>
 
 Going back to our password example. We have 4 positions to fill from 10 choices ($0,1,2, \ldots,8, 9$) and we can look at the choice for each position as an individual event with 10 different outcomes(corresponding to the 10 digits). 
 - For position 1, we can thus count 10 possible outcomes.
 - What about for position 2? As our choice for position 1 is not consumed, we can choose the same digit again – or we can choose a different digit. We still have 10 possible outcomes – and we count these 10 outcomes for each different outcome from position 1.
 
 We can now write the overall $10 * 10$ ways of making a choice. Continuting this we get $10^4 = 10,000$ choices for the 4 digit PIN. 
-
+<br><br>
 Now generalize this argument for k positions with n choices for each position. We are choosing \( k \) items from \( n \), and every item can be chosen again.
-- Each of the \( k \) positions has \( n \) choices.
-- $$ n \times n \times \cdots \times n = n^k $$
+
+ - Each of the \( k \) positions has \( n \) choices
+ - $ n \times n \times \cdots \times n = n^k $
 
 Below is a simulation for illustration, go ahead tinker with it.
 
-<br>
+<br><br>
 
 <iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
-<br>
 
 #### ii. Story Proof
 Imagine setting a 4-digit password. Each digit (slot) has 10 options (0-9), regardless of earlier choices. Total = \( 10^4 = 10,000 \).

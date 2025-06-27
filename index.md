@@ -30,10 +30,11 @@ Counting, once a shepherd’s survival skill, had become a scientific discipline
 ### From Enlightenment to Algorithms
 
 As the world entered the era of reason and then computation, counting evolved again. It became abstract—rooted in algebraic structures and functions. Mathematicians developed:
-
-&nbsp;&nbsp;&nbsp;&nbsp;• Generating functions to encode sequences
-&nbsp;&nbsp;&nbsp;&nbsp;• Partitions to explore sums of integers
-&nbsp;&nbsp;&nbsp;&nbsp;• Set theory and group theory to analyze symmetry and structure
+<ul style="margin-left: 2em;">
+  <li>Generating functions to encode sequences</li>
+  <li>Partitions to explore sums of integers</li>
+  <li>Set theory and group theory to analyze symmetry and structure</li>
+</ul>
 
 <br><br>
 In the 20th and 21st centuries, counting took on new forms through statistical physics and computer science. Combinatorics now powers everything from quantum state calculations to AI search algorithms, from data compression to genome sequencing.

@@ -57,7 +57,7 @@ Before we begin counting, we must ask ourselves the question: What exactly are w
 <br><br>
 **Order** - Are we counting simply the number of combinations of outcomes or their arrangements as well? 
 Consider **flipping two coins**, is there a difference between the outcomes **(tails, heads) and (heads, tails)**? If order matters then they are not the same.
-
+<br><br>
 **Replacement** – Does choosing an item remove it from future selections, or is it still available? Does it affect the possible outcomes of subsequent events? 
 <br><br>
 Imagine you're selecting a **book to read from a digital library app** that has 3 featured books on the homepage. Each time you open the app, you're allowed to choose one of the books to read for a while and then return it. Since the books are digital and nothing is physically removed from the collection, you can choose the same book again later. This is a situation with **replacement**—each selection doesn't change the set of available options for the next round.
@@ -74,7 +74,7 @@ Answering these two questions on order and repitition yields 4 separate categori
 | 3. Unordered without Replacement | No | No | Choosing 5 cards from a deck (e.g., poker hand) |
 | 4. Unordered with Replacement | Yes | No | Selecting 3 scoops of ice cream (order irrelevant) from 5 flavors |
 
----
+<br><br>
 
 Prior to getting into each coutjing problem and its solutions, let us take a quick detour and learn a powerful tool to solve coutning problems in general. This is particularly useful in combinatorics. It is called the **Story Proof** !
 
@@ -87,8 +87,9 @@ When faced with a complex-looking combinatorial identity, it’s tempting to div
 A story proof doesn’t rely on manipulating symbols. Instead, it relies on **understanding what the expression actually counts**, and then telling a different “story” that counts the same thing in another way.
 <br><br>
 At its heart, a story proof answers the question:
+<br><br>
 > *Can I interpret both sides of this identity as counting the same thing, but from different perspectives?*
-
+<br><br>
 This approach not only simplifies many problems, but often reveals *why* an identity is true—something that pure algebra may obscure.
 
 
@@ -105,8 +106,9 @@ At first glance, this looks intimidating—an unfamiliar summation of products o
 ### The Story
 
 Suppose you have two groups:
-- Group A has **m** people
-- Group B has **n** people
+<br><br>
+**Group A** has **m** people
+**Group B** has **n** people
 
 Together, there are **m + n** people. Now, you want to form a **committee of k people** from this combined group. That’s what the **right-hand side** is doing:
 
@@ -115,18 +117,18 @@ $$
 $$
 
 It counts the number of ways to choose k people from the total m + n.
-
+<br><br>
 But now, let’s count the same thing a different way.
 
 ### The Left-Hand Side
 
 Let’s decide **how many people to pick from Group A** and how many from Group B. Suppose we pick **j people from Group A**. Then, we must pick **k - j people from Group B** to reach k total.
 
-- Number of ways to choose j people from Group A: \(\binom{m}{j}\)
-- Number of ways to choose k - j people from Group B: \(\binom{n}{k - j}\)
+&nbsp;&nbsp;&nbsp;&nbsp;• Number of ways to choose j people from Group A: $\binom{m}{j}$
+&nbsp;&nbsp;&nbsp;&nbsp;• Number of ways to choose k - j people from Group B: $\binom{n}{k - j}$
 
 Now sum over all possible values of j (from 0 to k), and you’ve accounted for **every way to form a k-person committee from two groups**, by considering all possible combinations of contributions from Group A and B.
-<br>
+<br><br>
 That’s exactly what the **left-hand side** is doing:
 
 $$
@@ -136,12 +138,12 @@ $$
 ### Why This Matters
 
 Algebraically, proving this identity is messy—it requires manipulating binomial coefficients and careful bookkeeping. But the story proof is:
-- Clean
-- Visual
-- Intuitive
+&nbsp;&nbsp;&nbsp;&nbsp;• Clean  
+&nbsp;&nbsp;&nbsp;&nbsp;• Visual  
+&nbsp;&nbsp;&nbsp;&nbsp;• Intuitive
 
 And most importantly, it shows *why* the identity is true—not just *that* it is.
-<br>
+<br><br>
 Story proofs like this are a central technique in combinatorics because they link **counting** to **context**. They turn numbers into narratives—and in doing so, reveal patterns that algebra alone might hide.
 
 ---

@@ -128,7 +128,6 @@ But now, let’s count the same thing a different way.
 ### The Left-Hand Side
 
 Let’s decide **how many people to pick from Group A** and how many from Group B. Suppose we pick **j people from Group A**. Then, we must pick **k - j people from Group B** to reach k total.
-
 <ul>
   <li>Number of ways to choose j people from Group A: \( \binom{m}{j} \)</li>
   <li>Number of ways to choose k - j people from Group B: \( \binom{n}{k - j} \)</li>
@@ -194,18 +193,18 @@ But before starting to solve it, spend a minute thinking of those two questions 
 ### 1. **Ordered with Replacement**
 
 The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \(n \) choices, when order matters and replacement is allowed?
-
-
-Going back to our password example. We have 4 positions to fill from 10 choices: \( 0, 1, 2, \ldots, 9 \), and we can look at the choice for each position as an individual event with 10 different outcomes (corresponding to the 10 digits).
+<br><br>
+Going back to our password example. We have 4 positions to fill from 10 choices: \( 0, 1, 2, \cdot, 9 \), and we can look at the choice for each position as an individual event with 10 different outcomes (corresponding to the 10 digits).
 - For position 1, we can thus count 10 possible outcomes.
 - What about for position 2? As our choice for position 1 is not consumed, we can choose the same digit again – or we can choose a different digit. We still have 10 possible outcomes – and we count these 10 outcomes for each different outcome from position 1.
 <br><br>
-We can now write the overall $10 * 10$ ways of making a choice. Continuting this we get $10^4 = 10,000$ choices for the 4 digit PIN. 
+We can now write the overall $ 10 * 10 $ ways of making a choice. Continuting this we get $ 10^4 = 10,000 $ choices for the 4 digit PIN.
+We can now write the overall \( 10 \times 10 \) ways of making a choice. Continuing this, we get \( 10^4 = 10,\!000 \) choices for the 4-digit PIN. 
 <br><br>
 Now generalize this argument for \( k \) positions with \( n \) choices for each position. We are choosing \( k \) items from \( n \), and every item can be chosen again.
 
 <ul>
-  <li>Each of the \( k \) positions has \( n \) choices.</li>
+  <li>Each of the \( k \) positions has \( n \) choices</li>
   <li>\( n \times n \times \cdots \times n = n^k \)</li>
 </ul>
 

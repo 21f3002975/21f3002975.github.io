@@ -114,11 +114,12 @@ Where:
 We are choosing \( k \) items from \( n \), and every item can be chosen again.
 Each of the \( k \) positions has \( n \) choices.
 $$ n \times n \times \cdots \times n = n^k $$
-<iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 
 #### ii. Story Proof
 Imagine setting a 4-digit password. Each digit (slot) has 10 options (0-9), regardless of earlier choices. Total = \( 10^4 = 10,000 \).
+
+<iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 #### iii. Double Counting
 Count the total number of functions from a set \( \{1,2,...,k\} \) (positions) to \( \{1,2,...,n\} \) (items). There are $$ n^k $$ such functions.
@@ -133,6 +134,9 @@ $$ P(n, k) = \frac{n!}{(n - k)!} $$
 Choosing top 3 winners in a race with 10 runners. You cannot assign the same runner to more than one position.
 First place: 10 options, Second: 9, Third: 8. Total = $$ 10 \times 9 \times 8 $$
 
+<iframe src="/visualizations/ordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+
+
 #### iii. Double Counting
 Count the number of injective functions from a set \( \{1,2,...,k\} \) to \( \{1,2,...,n\} \):
 $$ P(n, k) $$ is the count of such injective mappings.
@@ -141,6 +145,7 @@ $$ P(n, k) $$ is the count of such injective mappings.
 
 ### 3. **Unordered with Replacement**
 #### i. Algebraic Derivation
+
 We are selecting \( k \) items from \( n \), with repetition and no order. This is equivalent to placing \( k \) indistinguishable balls into \( n \) distinguishable boxes.
 - Using "stars and bars":
 $$ \binom{n + k - 1}{k} $$
@@ -148,6 +153,8 @@ $$ \binom{n + k - 1}{k} $$
 #### ii. Story Proof
 Choose 3 scoops of ice cream (from 5 flavors), flavors can repeat, order doesn’t matter. E.g., (Vanilla, Vanilla, Chocolate).
 This becomes a question of how many ways to assign 3 indistinct scoops to 5 flavor types.
+
+<iframe src="/visualizations/unordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 #### iii. Double Counting
 Translate to placing \( k \) stars (choices) and \( n - 1 \) bars (dividers between types).
@@ -163,6 +170,8 @@ $$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
 
 #### ii. Story Proof
 Forming a committee of 3 people from a group of 10. The group members have no roles or ranks.
+
+<iframe src="/visualizations/unordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 #### iii. Double Counting
 Count permutations first: $$\frac{n!}{(n-k)!} $$, then divide by $$ k! $$ to account for ordering: $$ \text{Permutations} \div \text{orderings} = \frac{n!}{k!(n-k)!} $$

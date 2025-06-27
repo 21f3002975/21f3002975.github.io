@@ -258,40 +258,26 @@ $$
 <br><br>
 <iframe src="/visualizations/ordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
-
-#### iii. Double Counting
-Count the number of injective functions from a set \( \{1,2,...,k\} \) to \( \{1,2,...,n\} \):
-$$ P(n, k) $$ is the count of such injective mappings.
-
 ---
 
 ### 3. **Unordered with Replacement**
 
-The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \(n \) choices, when order does not matter and replacement is allowed?
-
-**Note : This is a significantly more difficult to intuitively understand compared to the other 3 sub-categories of counting problems and we will see why**
-
-### Unordered Selection with Replacement: The Stars and Bars Perspective
-
 Suppose we want to choose \( k \) items from a set of \( n \) distinct items. This time, we are allowed to **repeat selections** (replacement is allowed), but **we don’t care about the order** in which the items are chosen.
-
+<br><br>
 This situation might sound tricky at first, but there's a very helpful way to visualize it: using **stars and bins** (also called the **stars and bars** method).
 
----
 
-#### A Different Way to Think About It
+#### A Different Way to Think About It - The Stars and Bars Perspective
 
 Instead of thinking about *choosing items*, imagine we are **distributing \( k \) identical stars into \( n \) distinct bins**.
 
 - Each **star** represents one selection.
 - Each **bin** represents one of the \( n \) available items.
 - Since we can place multiple stars in the same bin, we're allowing **repetition** (i.e., selection with replacement).
-- Since the stars are identical, we’re only interested in **how many stars end up in each bin**, not the order they were placed — making this an **unordered** model.
-
+- Since the stars are identical, we’re only interested in **how many stars end up in each bin**, not the order they were placed — making this **unordered**.
+<br><br>
 This reframes our problem as:
 > In how many ways can we place \( k \) identical stars into \( n \) labeled bins?
-
----
 
 #### Stars and Bars: The Trick
 
@@ -303,7 +289,6 @@ To solve this, we can imagine arranging all the stars in a line, and then insert
 
 Each unique arrangement of these \( n + k - 1 \) symbols represents a valid way to distribute the stars into bins.
 
----
 
 #### The Counting Step
 
@@ -315,8 +300,6 @@ $$
 $$
 
 This is the total number of ways to choose \( k \) items from \( n \) types, **with replacement** and **without considering order**.
-
----
 
 #### Real-World Analogy
 
@@ -340,10 +323,6 @@ under the constraint that \( x, y, z, w \geq 0 \) and are integers. This is a **
 
 <br><br>
 <iframe src="/visualizations/unordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
-
-#### iii. Double Counting
-Translate to placing \( k \) stars (choices) and \( n - 1 \) bars (dividers between types).
-Total sequences = $$ \binom{n + k - 1}{k} $$.
 
 ---
 

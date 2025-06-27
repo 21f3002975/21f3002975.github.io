@@ -36,9 +36,8 @@ As the world entered the era of reason and then computation, counting evolved ag
   <li>Set theory and group theory to analyze symmetry and structure</li>
 </ul>
 
-<br><br>
 In the 20th and 21st centuries, counting took on new forms through statistical physics and computer science. Combinatorics now powers everything from quantum state calculations to AI search algorithms, from data compression to genome sequencing.
-
+<br><br>
 ---
 
 ## Counting, Probabilities and Uncertainity
@@ -78,6 +77,8 @@ Answering these two questions on order and repitition yields 4 separate categori
 
 
 Prior to getting into each coutjing problem and its solutions, let us take a quick detour and learn a powerful tool to solve coutning problems in general. This is particularly useful in combinatorics. It is called the **Story Proof** !
+<br><br>
+---
 
 ## The Power of Story Proofs in Counting
 
@@ -113,12 +114,13 @@ Suppose you have two groups:
 
 Together, there are **m + n** people. Now, you want to form a **committee of k people** from this combined group. That’s what the **right-hand side** is doing:
 
+### The Right-Hand Side
+Choosing **k people** from **m+n** people is what the right-hand side is doing. 
+
 $$
 \binom{m + n}{k}
 $$
 
-It counts the number of ways to choose k people from the total m + n.
-<br><br>
 But now, let’s count the same thing a different way.
 
 ### The Left-Hand Side
@@ -186,7 +188,7 @@ But before starting to solve it, spend a minute thinking of those two questions 
 
 **The standard way of phrasing this set of counting problems is : in how many ways can I choose $k$ items from $n$ choices, when order matters and replacement is allowed?**
 
-#### Solution : <span>$ n^k $</span>
+#### Solution : <span>\( n^k \)</span>
 
 Going back to our password example. We have 4 positions to fill from 10 choices ($0,1,2, \ldots,8, 9$) and we can look at the choice for each position as an individual event with 10 different outcomes(corresponding to the 10 digits). 
 - For position 1, we can thus count 10 possible outcomes.

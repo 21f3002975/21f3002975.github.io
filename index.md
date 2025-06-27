@@ -129,10 +129,9 @@ But now, let’s count the same thing a different way.
 
 Let’s decide **how many people to pick from Group A** and how many from Group B. Suppose we pick **j people from Group A**. Then, we must pick **k - j people from Group B** to reach k total.
 
-<ul style="margin-left: 2em;">
-  <li>Number of ways to choose j people from Group A: $\binom{m}{j}$ </li>
-  <li>Number of ways to choose k - j people from Group B: $\binom{n}{k - j}</li>
-</ul>
+  - Number of ways to choose j people from Group A: $\binom{m}{j}$
+  - Number of ways to choose k - j people from Group B: $\binom{n}{k - j}$
+
 
 Now sum over all possible values of j (from 0 to k), and you’ve accounted for **every way to form a k-person committee from two groups**, by considering all possible combinations of contributions from Group A and B.
 <br><br>
@@ -183,19 +182,18 @@ Where:
 
 ## Details of each Counting method
 
-We building the algebric solutions for each counting problem, we will use story proofs where required.
+While building the algebric solutions for each counting problem, we will use story proofs where required.
 
-Imagine, you have downloaded a new app and it requires that you set a 4 digit PIN. In how many ways can you do it. For simplicity, let us restrict the options to these 10 digits : $0, 1, 2, \ldots, 9$. 
+Imagine, you have downloaded a new app and it requires that you set a 4 digit PIN. In how many ways can you do it. For simplicity, let us restrict the options to these 10 digits : \(0, 1, 2, \ldots, 9\). 
 
 But before starting to solve it, spend a minute thinking of those two questions - **1) Does order matter? 2) Are repititions allowed?** The answer to the first one is yes order matters. In case of the latter, it usually depends on the application. In some case they may restrict repitition. In our case let us assume that repitition is allowed. And this takes us to our first category of counting problems.
 
 ### 1. **Ordered with Replacement**
 
-**The standard way of phrasing this set of counting problems is : in how many ways can I choose $k$ items from $n$ choices, when order matters and replacement is allowed?**
+The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \(n \) choices, when order matters and replacement is allowed?
 
-#### Solution : <span>\( n^k \)</span>
 
-Going back to our password example. We have 4 positions to fill from 10 choices $(0, 1, 2, \ldots, 9)$ and we can look at the choice for each position as an individual event with 10 different outcomes(corresponding to the 10 digits). 
+Going back to our password example. We have 4 positions to fill from 10 choices \( (0, 1, 2, \ldots, 9) \)$ and we can look at the choice for each position as an individual event with 10 different outcomes(corresponding to the 10 digits). 
 - For position 1, we can thus count 10 possible outcomes.
 - What about for position 2? As our choice for position 1 is not consumed, we can choose the same digit again – or we can choose a different digit. We still have 10 possible outcomes – and we count these 10 outcomes for each different outcome from position 1.
 <br><br>
@@ -212,25 +210,26 @@ Below is a simulation for illustration, go ahead tinker with it.
 
 <iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
-
-#### ii. Story Proof
-Imagine setting a 4-digit password. Each digit (slot) has 10 options (0-9), regardless of earlier choices. Total = \( 10^4 = 10,000 \).
-
-
-
-#### iii. Double Counting
-Count the total number of functions from a set \( \{1,2,...,k\} \) (positions) to \( \{1,2,...,n\} \) (items). There are $$ n^k $$ such functions.
-
 ---
+
 ### 2. **Ordered without Replacement**
-#### i. Algebraic Proof
+
+The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \(n \) choices, when order matters and replacement is not allowed?
+
+#
 First slot has \( n \) options, next has \( n - 1 \), and so on:
 $$ P(n, k) = \frac{n!}{(n - k)!} $$
 
-#### ii. Story Proof
-Choosing top 3 winners in a race with 10 runners. You cannot assign the same runner to more than one position.
-First place: 10 options, Second: 9, Third: 8. Total = $$ 10 \times 9 \times 8 $$
+Suppose 10 runners have a race and we need to award first, second and third prize. We might award the first prize to any of the 10 but for second prize, we can now only count up to 9 choices – it makes no sense to award second prize to the first-prize winner as well, so we take him out of the selection and we are left with 9 candidates. We thus have 10 * 9 =90 possible outcomes of the race where we award 2 prizes, and by extension 10 * 9 * 8 = 720 possible outcomes where we award 3 prizes.
 
+Now extend this to \( k \) positions with n participants. The 1st position has \(n \) choices of winners, the 2nd has \( (n-1) \), the 3rd one has \( (n-2) \) and for the \(k^{th}\) position it will be \( (n-2k+1 \).
+
+So that total options will be $ n \times (n-1) \times \ldots (n-k+1) $. Multiply this with $(n-k) \times (n-k-1) \ldots \times 1$ on the numerator and denominator to get the expression,
+
+$$ 
+P(n, k) = \frac{n!}{(n - k)!} 
+$$
+<br><br>
 <iframe src="/visualizations/ordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 

@@ -31,9 +31,10 @@ Counting, once a shepherd’s survival skill, had become a scientific discipline
 
 As the world entered the era of reason and then computation, counting evolved again. It became abstract—rooted in algebraic structures and functions. Mathematicians developed:
 
-- Generating functions to encode sequences
-- Partitions to explore sums of integers
-- Set theory and group theory to analyze symmetry and structure
+&nbsp;&nbsp;&nbsp;&nbsp;• Generating functions to encode sequences
+&nbsp;&nbsp;&nbsp;&nbsp;• Partitions to explore sums of integers
+&nbsp;&nbsp;&nbsp;&nbsp;• Set theory and group theory to analyze symmetry and structure
+
 <br><br>
 In the 20th and 21st centuries, counting took on new forms through statistical physics and computer science. Combinatorics now powers everything from quantum state calculations to AI search algorithms, from data compression to genome sequencing.
 
@@ -74,7 +75,6 @@ Answering these two questions on order and repitition yields 4 separate categori
 | 3. Unordered without Replacement | No | No | Choosing 5 cards from a deck (e.g., poker hand) |
 | 4. Unordered with Replacement | Yes | No | Selecting 3 scoops of ice cream (order irrelevant) from 5 flavors |
 
-<br><br>
 
 Prior to getting into each coutjing problem and its solutions, let us take a quick detour and learn a powerful tool to solve coutning problems in general. This is particularly useful in combinatorics. It is called the **Story Proof** !
 
@@ -138,6 +138,7 @@ $$
 ### Why This Matters
 
 Algebraically, proving this identity is messy—it requires manipulating binomial coefficients and careful bookkeeping. But the story proof is:
+
 &nbsp;&nbsp;&nbsp;&nbsp;• Clean  
 &nbsp;&nbsp;&nbsp;&nbsp;• Visual  
 &nbsp;&nbsp;&nbsp;&nbsp;• Intuitive

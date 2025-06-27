@@ -85,7 +85,7 @@ Imagine you're selecting a **book to read from a digital library app** that has 
 
 Compare that to a physical book fair, where if you pick a book and take it home, it's no longer on the shelf. The remaining options shrink after each selection—that's **without replacement**.
 
-Answering these two questions on order and repitition yields 4 separate categories of counting,
+Answering these two questions on order and repitition yields 4 separate categories of counting problems,
 
 
 | Model | Replacement | Order Matters | Example |
@@ -97,24 +97,7 @@ Answering these two questions on order and repitition yields 4 separate categori
 
 ---
 
-## The Big Four: Table of Counting Models
-
-Thus far, we have seen that answering these two questions, helps us categorize the counting problems into 4 sub-categories.
-- **Does order matter?**
-- **Are repetitions allowed?** (Replacement)
-
-And the solutions to these **four models** of counting are as follows:
-
-|                       | Order Matters               | Order Doesn't Matter   |
-|-----------------------|-----------------------------|------------------------|
-| **With Replacement**  | $$ n^k $$                   | $$ \binom{n + k - 1}{k} $$ |
-| **Without Replacement** | $$ \frac{n!}{(n - k)!} $$ | $$ \binom{n}{k} $$ |
-
-Where:
-- \( n \) = total number of distinct items
-- \( k \) = number of selections
-
----
+Prior to getting into each coutjing problem and its solutions, let us take a quick detour and learn a powerful tool to solve coutning problems in general. This is particularly useful in combinatorics. It is called the **Story Proof** !
 
 ## The Power of Story Proofs in Counting
 
@@ -134,9 +117,9 @@ This approach not only simplifies many problems, but often reveals *why* an iden
 
 ### The Identity
 
-\[
+$$
 \sum_{j=0}^k \binom{m}{j} \binom{n}{k - j} = \binom{m + n}{k}
-\]
+$$
 
 At first glance, this looks intimidating—an unfamiliar summation of products of binomial coefficients. But with a good story, it becomes beautifully clear.
 
@@ -148,9 +131,9 @@ Suppose you have two groups:
 
 Together, there are **m + n** people. Now, you want to form a **committee of k people** from this combined group. That’s what the **right-hand side** is doing:
 
-\[
+$$
 \binom{m + n}{k}
-\]
+$$
 
 It counts the number of ways to choose k people from the total m + n.
 
@@ -167,9 +150,9 @@ Now sum over all possible values of j (from 0 to k), and you’ve accounted for 
 
 That’s exactly what the **left-hand side** is doing:
 
-\[
+$$
 \sum_{j=0}^k \binom{m}{j} \binom{n}{k - j}
-\]
+$$
 
 ### Why This Matters
 
@@ -184,9 +167,30 @@ Story proofs like this are a central technique in combinatorics because they lin
 
 ---
 
+Now let us get back to the main focus of our article.
+
+## The Big Four
+
+Thus far, we have seen that answering these two questions, helps us categorize the counting problems into 4 sub-categories.
+- **Does order matter?**
+- **Are repetitions allowed?** (Replacement)
+
+And the solutions to these **four counting problems**are as follows:
+
+|                       | Order Matters               | Order Doesn't Matter   |
+|-----------------------|-----------------------------|------------------------|
+| **With Replacement**  | $$ n^k $$                   | $$ \binom{n + k - 1}{k} $$ |
+| **Without Replacement** | $$ \frac{n!}{(n - k)!} $$ | $$ \binom{n}{k} $$ |
+
+Where:
+- \( n \) = total number of distinct items
+- \( k \) = number of selections
+
+---
+
 ## Details of each Counting method
 
-Now let us get back to our counting methods and under each counting method we will explore an algebric proof followed by a story proof. But first lets us start by motivating it with an example. 
+We building the algebric solutions for each counting problem, we will use story proofs where required.
 
 Imagine, you have downloaded a new app and it requires that you set a 4 digit PIN. In how many ways can you do it. For simplicity, let us restrict the options to these 10 digits : $0,1,2, \ldots,8, 9$. 
 
@@ -196,9 +200,7 @@ But before starting to solve it, spend a minute thinking of those two questions 
 
 **The standard way of phrasing this set of counting problems is : in how many ways can I choose $k$ items from $n$ choices, when order matters and replacement is allowed?**
 
-Let us start with the algebric proof, which usually constitutes of simplying equations or constructing a formula from first principles.
-
-#### i. Algebraic Proof
+#### Solution : $ n^k $
 
 Going back to our password example. We have 4 positions to fill from 10 choices ($0,1,2, \ldots,8, 9$) and we can look at the choice for each position as an individual event with 10 different outcomes(corresponding to the 10 digits). 
 - For position 1, we can thus count 10 possible outcomes.
@@ -217,7 +219,6 @@ Below is a simulation for illustration, go ahead tinker with it.
 <iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 <br><br>
-
 
 #### ii. Story Proof
 Imagine setting a 4-digit password. Each digit (slot) has 10 options (0-9), regardless of earlier choices. Total = \( 10^4 = 10,000 \).

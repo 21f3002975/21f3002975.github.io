@@ -9,11 +9,11 @@ mathjax: true
 ## The Story of Counting: From Pebbles to Probability
 
 Long before equations, calculators, or even written language, humans were counting.
-<br>
+<br><br>
 Imagine a shepherd, thousands of years ago, watching over his flock in the fading light of dusk. With no numerals or notations, he dropped a pebble into a pouch for every sheep that wandered past his hut at night. The next morning, he poured the pebbles out and, one by one, matched them to the sheep leaving the pen. If one pebble remained, he knew a sheep was missing. This wasn’t math as we think of it—but it was counting in its most primal form: a method to track, compare, and reason.
-<br>
+<br><br>
 Over time, fingers gave way to tally marks etched on bones and stones. As trade and civilizations grew, so did the complexity of counting. The Egyptians tracked harvests, the Babylonians devised base-60 counting systems, and merchants used tokens and abacuses to track inventories and debts.
-<br>
+<br><br>
 But counting wasn’t just about keeping track. It became a tool for exploring possibilities.
 
 ### The Rise of Structured Counting
@@ -22,9 +22,9 @@ At the turn of the first millennium, scholars began to ask deeper questions:
 *“In how many ways can you arrange objects?”*  
 *“What happens if repetitions are allowed?”*  
 These questions gave birth to early theories of permutations and combinations— the building blocks of what we now call combinatorics.
-<br>
+<br><br>
 Centuries later, in 1700s Europe, minds like Blaise Pascal and Pierre de Fermat formalized counting in the context of uncertainty. Their letters back and forth laid the foundation for probability theory—a revolutionary idea that chance could be measured, predicted, and even calculated.
-<br>
+<br><br>
 Counting, once a shepherd’s survival skill, had become a scientific discipline.
 
 ### From Enlightenment to Algorithms
@@ -34,7 +34,7 @@ As the world entered the era of reason and then computation, counting evolved ag
 - Generating functions to encode sequences
 - Partitions to explore sums of integers
 - Set theory and group theory to analyze symmetry and structure
-<br>
+<br><br>
 In the 20th and 21st centuries, counting took on new forms through statistical physics and computer science. Combinatorics now powers everything from quantum state calculations to AI search algorithms, from data compression to genome sequencing.
 
 ---
@@ -42,7 +42,7 @@ In the 20th and 21st centuries, counting took on new forms through statistical p
 ## Counting, Probabilities and Uncertainity
 
 As counting matured into a mathematical discipline, it became a foundation for understanding uncertainty—giving rise to the fields of probability and statistics. Before we can assign probabilities to outcomes or reason about randomness, we must first know how to count the possible arrangements or selections that underlie those outcomes. 
-<br>
+<br><br>
 In **probability**, counting provides a way to calculate the likelihood of events. Probabilities are defined as ratios:
 
 $$
@@ -54,16 +54,16 @@ This simple formula relies entirely on accurate counting. Whether you're computi
 ### Order and Replacement
 
 Before we begin counting, we must ask ourselves the question: What exactly are we counting? More specifically, we are concerned with
-<br>
-- **Order** - Are we counting simply the number of combinations of outcomes or their arrangements as well? 
+<br><br>
+**Order** - Are we counting simply the number of combinations of outcomes or their arrangements as well? 
 Consider **flipping two coins**, is there a difference between the outcomes **(tails, heads) and (heads, tails)**? If order matters then they are not the same.
 
-- **Replacement** – Does choosing an item remove it from future selections, or is it still available? Does it affect the possible outcomes of subsequent events? 
-<br>
+**Replacement** – Does choosing an item remove it from future selections, or is it still available? Does it affect the possible outcomes of subsequent events? 
+<br><br>
 Imagine you're selecting a **book to read from a digital library app** that has 3 featured books on the homepage. Each time you open the app, you're allowed to choose one of the books to read for a while and then return it. Since the books are digital and nothing is physically removed from the collection, you can choose the same book again later. This is a situation with **replacement**—each selection doesn't change the set of available options for the next round.
-<br>
+<br><br>
 Compare that to a physical book fair, where if you pick a book and take it home, it's no longer on the shelf. The remaining options shrink after each selection—that's **without replacement**.
-<br>
+<br><br>
 Answering these two questions on order and repitition yields 4 separate categories of counting problems,
 
 
@@ -85,7 +85,7 @@ When faced with a complex-looking combinatorial identity, it’s tempting to div
 ### What is a Story Proof?
 
 A story proof doesn’t rely on manipulating symbols. Instead, it relies on **understanding what the expression actually counts**, and then telling a different “story” that counts the same thing in another way.
-<br>
+<br><br>
 At its heart, a story proof answers the question:
 > *Can I interpret both sides of this identity as counting the same thing, but from different perspectives?*
 

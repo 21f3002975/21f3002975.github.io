@@ -330,14 +330,48 @@ Below is a simulation for illustration, go ahead tinker with it.
 
 ### 4. **Unordered without Replacement**
 
-#### i. Algebraic Proof
-We want to select \( k \) distinct items, order doesn’t matter:
-$$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
+Suppose you're forming a **committee of 3 people from a group of 10**. The key condition is that **there are no roles, titles, or ranks** — every member of the committee is treated equally. This means that the **order in which you select them doesn't matter**.
+<br><br>
 
-#### ii. Story Proof
-Forming a committee of 3 people from a group of 10. The group members have no roles or ranks.
+<p>Let’s first walk through what happens <strong>if we did care about order</strong>:</p>
+<ul>
+  <li>For the first position, we have 10 choices.</li>
+  <li>For the second, 9 remaining choices.</li>
+  <li>For the third, 8 choices.</li>
+</ul>
 
-Below is a simulation for illustration, go ahead tinker with it.
+That gives us \( 10 \times 9 \times 8 = 720 \) different **ordered** outcomes. But in this committee scenario, choosing (Alice, Bob, Carol) is **the same as** (Carol, Bob, Alice) — they all lead to the same group of people. So these 720 outcomes **overcount** what we actually want.
+
+To correct for this, we need to ask:  
+> How many different ways can we reorder a single 3-person group?
+
+The answer is \( 3! = 6 \) — every group of 3 people appears **six times** in the ordered list (once for each possible ordering).
+
+So to find the number of **unordered** selections, we divide out the redundancy:
+
+\[
+\frac{10 \times 9 \times 8}{3!} = \frac{720}{6} = 120
+\]
+
+In general, when choosing \( k \) items from \( n \), and:
+- **Order does not matter**
+- **No item is reused** (no replacement)
+
+…we start with the total number of ordered selections (as in permutations), which is:
+
+$$
+\frac{n!}{(n - k)!}
+$$
+
+But since each group of \( k \) items appears \( k! \) times (once per permutation of those items), we divide by \( k! \) to eliminate overcounting:
+
+$$
+\binom{n}{k} = \frac{n!}{k!(n - k)!}
+$$
+
+This is called a **combination**, or more informally, **“n choose k”**.
+
+It gives the number of ways to choose \( k \) items from \( n \), **ignoring order and without replacement**.
 
 <br><br>
 <iframe src="/visualizations/unordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
@@ -345,11 +379,24 @@ Below is a simulation for illustration, go ahead tinker with it.
 
 ## Parting Thoughts
 
-Understanding these models is essential in:
+The four counting models we've explored — whether or not **order matters**, and whether or not we allow **replacement** — form the backbone of countless problems in combinatorics, probability, computer science, and even the real world.
 
-- Solving real-world problems in probability.
-- Interpreting probabilistic models in AI, statistics, and physics.
-- Building foundational intuition for deeper topics (Bayes, distributions, expectation).
+Through these models, we’ve learned to:
+- Break complex decisions into simple, repeatable rules.
+- Visualize problems using powerful metaphors like slots, bins, and stars.
+- Translate abstract questions into mathematical formulas: \( n^k \), \( \dfrac{n!}{(n - k)!} \), \( \binom{n}{k} \), and \( \binom{n + k - 1}{k} \).
 
+Understanding these distinctions isn't just about solving textbook problems — it's about recognizing structure in everything from PIN codes and passwords to elections, inventory tracking, and resource allocation.
 
+In short: **Before you can measure chance, you must know how to count.**
 
+---
+
+<span style="font-size: 0.9em; color: #555;">
+This content was developed and compiled as part of a learning project exploring foundational ideas in combinatorics and probability for Discrete Mathmeatics ES 214 course at IIT Gandhinagar .<br><br>
+
+Some of the content has been inspired by to:<br>
+&bull; <em>Joe Blitzstein's lecture series at Harvard.<br>
+&bull; <em>Karthik T's lecture on Art of Counting at IIT Madras.<br>
+
+</span>

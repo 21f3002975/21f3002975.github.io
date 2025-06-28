@@ -246,8 +246,8 @@ The standard way of phrasing this set of counting problems is : in how many ways
 
 
 Suppose 10 runners have a race and we need to award first, second and third prize. We might award the first prize to any of the 10 but for second prize, we can now only count up to 9 choices – it makes no sense to award second prize to the first-prize winner as well, so we take him out of the selection and we are left with 9 candidates. We thus have 10 * 9 =90 possible outcomes of the race where we award 2 prizes, and by extension 10 * 9 * 8 = 720 possible outcomes where we award 3 prizes.
-
-Now extend this to \( k \) positions with n participants. The 1st position has \(n \) choices of winners, the 2nd has \( (n-1) \), the 3rd one has \( (n-2) \) and for the \(k^{th}\) position it will be \( (n-k+1 \).
+<br><br>
+Now extend this to $`k`$  positions with $n$ participants. The 1st position has $`n`$ choices of winners, the 2nd has \( (n-1) \), the 3rd one has \( (n-2) \) and for the $`k^{th}`$ position it will be \( (n-k+1 \).
 
 So that total options will be \( n \times (n-1) \times \ldots (n-k+1) \). Multiply this with \( (n-k) \times (n-k-1) \ldots \times 1 \) on the numerator and denominator to get the expression,
 
@@ -400,9 +400,12 @@ In short: **Before you can measure chance, you must know how to count.**
 
 <br><br>
 
-<span style="font-size: 0.9em; color: #555;">
-This content was developed and compiled as part of a learning project exploring foundational ideas in combinatorics and probability for Discrete Mathmeatics ES 214 course at IIT Gandhinagar .<br><br>
 
-Some of the content has been inspired by to:<br>
-&bull; Joe Blitzstein's lecture series at Harvard.
+<span style="font-size: 0.9em; color: #555;">
+This content was developed and compiled as part of a learning project exploring foundational ideas in combinatorics and probability for the <em>Discrete Mathematics ES214</em> course at IIT Gandhinagar.
+<br><br>
+<span style="font-size: 0.8em; color: #777;">
+Some of the content has been inspired by:<br>
+&bull; Joe Blitzstein’s lecture series at Harvard.
+</span>
 </span>

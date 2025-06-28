@@ -382,21 +382,27 @@ It gives the number of ways to choose \( k \) items from \( n \), **ignoring ord
 The four counting models we've explored — whether or not **order matters**, and whether or not we allow **replacement** — form the backbone of countless problems in combinatorics, probability, computer science, and even the real world.
 
 Through these models, we’ve learned to:
-- Break complex decisions into simple, repeatable rules.
-- Visualize problems using powerful metaphors like slots, bins, and stars.
-- Translate abstract questions into mathematical formulas: \( n^k \), \( \dfrac{n!}{(n - k)!} \), \( \binom{n}{k} \), and \( \binom{n + k - 1}{k} \).
+<ul>
+  <li>Break complex decisions into simple, repeatable rules.</li>
+  <li>Visualize problems using powerful metaphors like slots, bins, and stars.</li>
+  <li>
+    Translate abstract questions into mathematical formulas:
+    \( n^k \), \( \dfrac{n!}{(n - k)!} \), \( \binom{n}{k} \), and \( \binom{n + k - 1}{k} \).
+  </li>
+</ul>
 
 Understanding these distinctions isn't just about solving textbook problems — it's about recognizing structure in everything from PIN codes and passwords to elections, inventory tracking, and resource allocation.
 
 In short: **Before you can measure chance, you must know how to count.**
+<br><br>
 
 ---
+
+<br><br>
 
 <span style="font-size: 0.9em; color: #555;">
 This content was developed and compiled as part of a learning project exploring foundational ideas in combinatorics and probability for Discrete Mathmeatics ES 214 course at IIT Gandhinagar .<br><br>
 
 Some of the content has been inspired by to:<br>
-&bull; <em>Joe Blitzstein's lecture series at Harvard.<br>
-&bull; <em>Karthik T's lecture on Art of Counting at IIT Madras.<br>
-
+&bull; Joe Blitzstein's lecture series at Harvard.
 </span>

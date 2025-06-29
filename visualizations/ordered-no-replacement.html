@@ -124,10 +124,6 @@
           <div class="label">Position 3</div>
           <div class="box"></div>
         </div>
-        <div class="box-container">
-          <div class="label">Position 4</div>
-          <div class="box"></div>
-        </div>
       </div>
 
       <div class="explanation" id="explanation">
@@ -174,52 +170,36 @@
     });
 
     function addDigit(digit, button) {
-      if (filled >= 4 || usedDigits.has(digit)) return;
+      if (filled >= 3 || usedDigits.has(digit)) return;
 
       boxes[filled].textContent = digit;
       usedDigits.add(digit);
       button.disabled = true;
       filled++;
 
-      if (filled === 3) {
-        // Auto-fill 4th digit randomly from unused digits
-        const allDigits = ["0","1","2","3","4","5","6","7","8","9"];
-        const unused = allDigits.filter(d => !usedDigits.has(d));
-        if (unused.length > 0) {
-          const randomIndex = Math.floor(Math.random() * unused.length);
-          const randomDigit = unused[randomIndex];
-          boxes[3].textContent = randomDigit;
-          usedDigits.add(randomDigit);
-          buttonMap[randomDigit].disabled = true;
-          updateExplanation();
-          filled++;
-        }
-        // Do NOT update explanation text here
-        return;
-      }
-
-      if (filled < 4) {
-        updateExplanation();
-      }
+      updateExplanation();
     }
-
 
     function updateExplanation() {
       const choices = 10 - filled;
       const pos = filled + 1;
 
-      let text = `${choices} choices for position ${pos}`;
-      let italics = "";
+      if (filled < 3) {
+        let text = `${choices} choices for position ${pos}`;
+        let italics = "";
 
-      for (let i = filled; i >= 1; i--) {
-        italics += `<i>for each of the ${11-i} choices in position ${i}</i>`;
+        for (let i = filled; i >= 1; i--) {
+          italics += `<i>for each of the ${11-i} choices in position ${i}</i>`;
+        }
+
+        const multipliers = Array.from({ length: pos }, (_, i) => 10 - i);
+        const total = multipliers.reduce((a, b) => a * b, 1);
+        italics += `<i>=${multipliers.join(" * ")} = ${total} possible choices</i>`;
+
+        explanation.innerHTML = `${text}${italics}`;
+      } else {
+        explanation.innerHTML += "<i>No more positions to fill.</i>";
       }
-
-      const multipliers = Array.from({ length: pos }, (_, i) => 10 - i);
-      const total = multipliers.reduce((a, b) => a * b, 1);
-      italics += `<i>=${multipliers.join(" * ")} = ${total} possible choices</i>`;
-
-      explanation.innerHTML = `${text}${italics}`;
     }
 
     function clearBoxes() {

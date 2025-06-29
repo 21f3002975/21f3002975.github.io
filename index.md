@@ -102,13 +102,16 @@ Answering these two questions on order and repitition yields 4 separate categori
 | 3. Unordered without Replacement | No | No | Choosing 5 cards from a deck (e.g., poker hand) |
 | 4. Unordered with Replacement | Yes | No | Selecting 3 scoops of ice cream (order irrelevant) from 5 flavors |
 
-
-Prior to getting into each coutjing problem and its solutions, let us take a quick detour and learn a powerful tool to solve coutning problems in general. This is particularly useful in combinatorics. It is called the **Story Proof** !
 <br><br>
 
 ---
 
-## The Power of Story Proofs in Counting
+## A Short De-tour First
+
+Prior to getting into each counting problem and its solutions, let us take a quick detour and learn a powerful tool to solve counting problems in general. This is particularly useful in combinatorics. It is called the **Story Proof** !
+
+
+### The Power of Story Proofs in Counting
 
 When faced with a complex-looking combinatorial identity, it’s tempting to dive straight into algebra: expanding factorials, simplifying expressions, and trying to manipulate your way to a solution. But in combinatorics, there's a different, often more intuitive technique—**story proofs**, also known as **combinatorial arguments**.
 
@@ -123,7 +126,7 @@ At its heart, a story proof answers the question:
 This approach not only simplifies many problems, but often reveals *why* an identity is true—something that pure algebra may obscure.
 
 
-### Vandermonde's Identity via Story Proof
+### Vandermonde's Identity 
 
 ### The Identity
 
@@ -159,7 +162,6 @@ Let’s decide **how many people to pick from Group A** and how many from Group 
   <li>Number of ways to choose k - j people from Group B: \( \binom{n}{k - j} \)</li>
 </ul>
 
-<br><br>
 Now sum over all possible values of j (from 0 to k), and you’ve accounted for **every way to form a k-person committee from two groups**, by considering all possible combinations of contributions from Group A and B.
 <br><br>
 That’s exactly what the **left-hand side** is doing:
@@ -179,19 +181,20 @@ Algebraically, proving this identity is messy—it requires manipulating binomia
 
 And most importantly, it shows *why* the identity is true—not just *that* it is.
 <br><br>
+
 Story proofs like this are a central technique in combinatorics because they link **counting** to **context**. They turn numbers into narratives—and in doing so, reveal patterns that algebra alone might hide.
 
----
 <br><br>
+---
 
 Now let us get back to the main focus of our article.
 
 ## The Big Four
 
-Thus far, we have seen that answering these two questions, helps us categorize the counting problems into 4 sub-categories.
+Thus far, we have seen that answering the below two questions, helps us categorize the counting problems into 4 sub-categories.
 <ul style="margin-left: 2em;">
   <li><strong> Does order matter? </strong></li>
-  <li><strong> Are repetitions allowed? (Replacement) </strong></li>
+  <li><strong> Are repetitions allowed? (replacement of chosen items) </strong></li>
 </ul>
 
 And the solutions to these **four counting problems**are as follows:
@@ -202,8 +205,12 @@ And the solutions to these **four counting problems**are as follows:
 | **Without Replacement** | $$ \frac{n!}{(n - k)!} $$ | $$ \binom{n}{k} $$ |
 
 Where:
-- \( n \) = total number of distinct items
-- \( k \) = number of selections
+
+<ul style="margin-left: 2em;">
+  <li> $ n $ = total number of distinct items</li>
+  <li> $ k $ number of selections</li>
+</ul>
+
 <br><br>
 
 ---
@@ -212,7 +219,7 @@ Where:
 
 While building the algebric solutions for each counting problem, we will use story proofs where required.
 
-Imagine you've downloaded a new app that requires you to set a 4-digit PIN. How many different PINs can you create? For simplicity, let’s restrict the options to the 10 digits : \( 0, 1, 2, \ldots, 9 \). 
+Imagine you've downloaded a new app that requires you to set a 4-digit PIN. How many different PINs can you create? For simplicity, let’s restrict the options to the 10 digits : 0, 1, 2, ..., 9. 
 
 But before starting to solve it, spend a minute thinking of those two questions - **1) Does order matter? 2) Are repititions allowed?** The answer to the first one is yes order matters. In case of the latter, it usually depends on the application. In some case they may restrict repitition. In our case let us assume that repitition is allowed. And this takes us to our first category of counting problems.
 

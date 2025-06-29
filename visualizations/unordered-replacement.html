@@ -82,21 +82,49 @@
     input[type=number] {
       -moz-appearance: textfield;
     }
+    .input-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px 20px;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .label-cell {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .input-cell input {
+      width: 30px;
+      padding: 8px;
+      font-size: 20px;
+      box-sizing: border-box;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
   <h2>Stars and bars demo</h2>
   <div id="input-section">
-  <div class="input-row">
-    <label for="star-count">Number of Stars (max 9):</label>
-    <input type="number" id="star-count" min="1" max="9" maxlength="1" />
+    <div class="input-grid">
+      <div class="label-cell">Number of Stars (max 9):</div>
+      <div class="input-cell">
+        <input type="number" id="star-count" min="1" max="9" maxlength="1" style="appearance: textfield;" />
+      </div>
+      <div class="label-cell">Number of Groups (max 9):</div>
+      <div class="input-cell">
+        <input type="number" id="group-count" min="1" max="9" maxlength="1" style="appearance: textfield;" />
+      </div>
+    </div>
+    <div class="button-container">
+      <button onclick="startDemo()">Generate demo</button>
+    </div>
   </div>
-  <div class="input-row">
-    <label for="group-count">Number of Groups (max 9):</label>
-    <input type="number" id="group-count" min="1" max="9" maxlength="1" />
-  </div>
-  <button onclick="startDemo()">Generate demo</button>
-</div>
+  
 
   <div id="demo-section" class="hidden">
     <div class="counter" id="counter"></div>

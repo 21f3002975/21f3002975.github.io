@@ -153,7 +153,7 @@ But now, let’s count the same thing a different way.
 ### The Left-Hand Side
 
 Let’s decide **how many people to pick from Group A** and how many from Group B. Suppose we pick **j people from Group A**. Then, we must pick **k - j people from Group B** to reach k total.
-<ul>
+<ul style="margin-left: 2em;">
   <li>Number of ways to choose j people from Group A: \( \binom{m}{j} \)</li>
   <li>Number of ways to choose k - j people from Group B: \( \binom{n}{k - j} \)</li>
 </ul>
@@ -244,14 +244,14 @@ The standard way of phrasing this set of counting problems is : in how many ways
 <br><br>
 Suppose 10 runners have a race and we need to award first, second and third prize. We might award the first prize to any of the 10 but for second prize, we can now only count up to 9 choices – it makes no sense to award second prize to the first-prize winner as well, so we take him out of the selection and we are left with 9 candidates. We thus have 10 * 9 =90 possible outcomes of the race where we award 2 prizes, and by extension 10 * 9 * 8 = 720 possible outcomes where we award 3 prizes.
 <br><br>
-Now extend this to $k$  positions with $n$ participants. The 1st position has $n$ choices of winners, the 2nd has $(n-1)$, the 3rd one has $(n-2)$ and for the $k^{th}$ position it will be $(n-k+1)$.
-
+<p>Now extend this to \( k \)  positions with \( n \) participants. The 1st position has $n$ choices of winners, the 2nd has \( n-1 \), the 3rd one has \( n-2 \) and for the (\ k^{th} \) position it will be \( n-k+1 \).
+<br>br>
 So that total options will be \( n \times (n-1) \times \ldots (n-k+1) \). Multiply this with \( (n-k) \times (n-k-1) \ldots \times 1 \) on the numerator and denominator to get the expression,
 
 $$ 
 P(n, k) = \frac{n!}{(n - k)!} 
 $$
-
+</p>
 Below is a simulation for illustration, go ahead tinker with it.
 
 <br><br>

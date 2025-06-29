@@ -63,8 +63,6 @@ Before we dive into counting techniques, here’s a quick reference for some sta
   </li>
 </ul>
 
-<br><br>
-
   --- 
 
 ## Counting, Probabilities and Uncertainity
@@ -101,8 +99,6 @@ Answering these two questions on order and repitition yields 4 separate categori
 | 2. Ordered without Replacement | No | Yes | Assigning top 3 race positions from 10 runners |
 | 3. Unordered without Replacement | No | No | Choosing 5 cards from a deck (e.g., poker hand) |
 | 4. Unordered with Replacement | Yes | No | Selecting 3 scoops of ice cream (order irrelevant) from 5 flavors |
-
-<br><br>
 
 ---
 
@@ -184,7 +180,6 @@ And most importantly, it shows *why* the identity is true—not just *that* it i
 
 Story proofs like this are a central technique in combinatorics because they link **counting** to **context**. They turn numbers into narratives—and in doing so, reveal patterns that algebra alone might hide.
 
-<br><br>
 ---
 
 Now let us get back to the main focus of our article.
@@ -207,11 +202,9 @@ And the solutions to these **four counting problems**are as follows:
 Where:
 
 <ul style="margin-left: 2em;">
-  <li> $ n $ = total number of distinct items</li>
-  <li> $ k $ number of selections</li>
+  <li> \( n \) = total number of distinct items</li>
+  <li> \( k \) number of selections</li>
 </ul>
-
-<br><br>
 
 ---
 
@@ -219,23 +212,21 @@ Where:
 
 While building the algebric solutions for each counting problem, we will use story proofs where required.
 
-Imagine you've downloaded a new app that requires you to set a 4-digit PIN. How many different PINs can you create? For simplicity, let’s restrict the options to the 10 digits : 0, 1, 2, ..., 9. 
+Imagine you've downloaded a new app that requires you to set a 4-digit PIN. How many different PINs can you create? For simplicity, let’s restrict the options to the 10 digits : 0, 1, 2, ... 9. 
 
 But before starting to solve it, spend a minute thinking of those two questions - **1) Does order matter? 2) Are repititions allowed?** The answer to the first one is yes order matters. In case of the latter, it usually depends on the application. In some case they may restrict repitition. In our case let us assume that repitition is allowed. And this takes us to our first category of counting problems.
 
 ### 1. **Ordered with Replacement**
 
-The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \(n \) choices, when order matters and replacement is allowed?
+The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \( n \) choices, when order matters and replacement is allowed?
 <br><br>
-Going back to our password example. We have 4 positions to fill from 10 choices: \( 0, 1, 2, \cdot, 9 \), and we can look at the choice for each position as an individual event with 10 different outcomes (corresponding to the 10 digits).
+Going back to our password example. We have 4 positions to fill from 10 choices: \( 0, 1, 2, ... 9 \), and we can look at the choice for each position as an individual event with 10 different outcomes (corresponding to the 10 digits).
 - For position 1, we can thus count 10 possible outcomes.
 - What about for position 2? As our choice for position 1 is not consumed, we can choose the same digit again – or we can choose a different digit. We still have 10 possible outcomes – and we count these 10 outcomes for each different outcome from position 1.
-<br><br>
 <p>We can now write the overall \( 10 \times 10 \) ways of making a choice. Continuing this, we get \( 10^4 = 10,000 \) choices for the 4-digit PIN.</p>
-<br><br>
 Now generalize this argument for \( k \) positions with \( n \) choices for each position. We are choosing \( k \) items from \( n \), and every item can be chosen again.
 
-<ul>
+<ul style="margin-left: 2em;">
   <li>Each of the \( k \) positions has \( n \) choices</li>
   <li>\( n \times n \times \cdots \times n = n^k \)</li>
 </ul>

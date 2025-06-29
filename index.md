@@ -224,7 +224,7 @@ Going back to our password example. We have 4 positions to fill from 10 choices:
 - For position 1, we can thus count 10 possible outcomes.
 - What about for position 2? As our choice for position 1 is not consumed, we can choose the same digit again – or we can choose a different digit. We still have 10 possible outcomes – and we count these 10 outcomes for each different outcome from position 1.
 <br><br>
-We can now write the overall \( 10 \times 10 \) ways of making a choice. Continuing this, we get \( 10^4 = 10,000 \) choices for the 4-digit PIN.
+<p>We can now write the overall \( 10 \times 10 \) ways of making a choice. Continuing this, we get \( 10^4 = 10,000 \) choices for the 4-digit PIN.</p>
 <br><br>
 Now generalize this argument for \( k \) positions with \( n \) choices for each position. We are choosing \( k \) items from \( n \), and every item can be chosen again.
 
@@ -242,12 +242,11 @@ Below is a simulation for illustration, go ahead tinker with it.
 
 ### 2. **Ordered without Replacement**
 
-The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \(n \) choices, when order matters and replacement is not allowed?
-
-
+The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \( n \) choices, when order matters and replacement is not allowed?
+<br><br>
 Suppose 10 runners have a race and we need to award first, second and third prize. We might award the first prize to any of the 10 but for second prize, we can now only count up to 9 choices – it makes no sense to award second prize to the first-prize winner as well, so we take him out of the selection and we are left with 9 candidates. We thus have 10 * 9 =90 possible outcomes of the race where we award 2 prizes, and by extension 10 * 9 * 8 = 720 possible outcomes where we award 3 prizes.
 <br><br>
-Now extend this to $k$  positions with $n$ participants. The 1st position has $n$ choices of winners, the 2nd has $(n-1)$, the 3rd one has $(n-2)$ and for the $k^{th}$ position it will be $(n-k+1$.
+Now extend this to $k$  positions with $n$ participants. The 1st position has $n$ choices of winners, the 2nd has $(n-1)$, the 3rd one has $(n-2)$ and for the $k^{th}$ position it will be $(n-k+1)$.
 
 So that total options will be \( n \times (n-1) \times \ldots (n-k+1) \). Multiply this with \( (n-k) \times (n-k-1) \ldots \times 1 \) on the numerator and denominator to get the expression,
 

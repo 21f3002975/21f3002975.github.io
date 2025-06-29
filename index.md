@@ -246,7 +246,7 @@ The standard way of phrasing this set of counting problems is : in how many ways
 <br><br>
 Suppose 10 runners have a race and we need to award first, second and third prize. We might award the first prize to any of the 10 but for second prize, we can now only count up to 9 choices – it makes no sense to award second prize to the first-prize winner as well, so we take him out of the selection and we are left with 9 candidates. We thus have 10 * 9 =90 possible outcomes of the race where we award 2 prizes, and by extension 10 * 9 * 8 = 720 possible outcomes where we award 3 prizes.
 <br><br>
-Now extend this to $k$  positions with $n$ participants. The 1st position has $n$ choices of winners, the 2nd has $(n-1)$, the 3rd one has $(n-2)$ and for the $k^{th}$ position it will be $(n-k+1)$.
+Now extend this to <span class="math inline">\(k\)</span>  positions with <span class="math inline">\(n\)</span> participants. The 1st position has <span class="math inline">\(n\)</span> choices of winners, the 2nd has <span class="math inline">\((n-1)\)</span>, the 3rd one has <span class="math inline">\((n-2)\)</span> and for the <span class="math inline">\(k^{th}\)</span> position it will be <span class="math inline">\((n-k+1)\)</span>.
 
 So that total options will be \( n \times (n-1) \times \ldots (n-k+1) \). Multiply this with \( (n-k) \times (n-k-1) \ldots \times 1 \) on the numerator and denominator to get the expression,
 
@@ -303,9 +303,9 @@ This is the total number of ways to choose \( k \) items from \( n \) types, **w
 
 #### Real-World Analogy
 
-Imagine you have \$100 that you want to break into bills of certain denominations: \$50, \$20, \$10, and \$5. Your goal is to find out **how many different ways** you can split the \$100 using any number of these bills — as long as the total is exactly \$100.
+Imagine you have \<span class="math inline">\(100 that you want to break into bills of certain denominations: \\)</span>50, \<span class="math inline">\(20, \\)</span>10, and \<span class="math inline">\(5. Your goal is to find out **how many different ways** you can split the \\)</span>100 using any number of these bills — as long as the total is exactly \$100.
 
-Here, each **denomination** (\$50, \$20, \$10, \$5) acts like a **bin** (or category), and each time you choose a bill, you're placing a **star** into that bin.
+Here, each **denomination** (\<span class="math inline">\(50, \\)</span>20, \<span class="math inline">\(10, \\)</span>5) acts like a **bin** (or category), and each time you choose a bill, you're placing a **star** into that bin.
 
 - You can choose the same denomination multiple times — just like **replacement** in our model.
 - You don’t care about the **order** in which the bills are chosen — only **how many** of each you end up with.

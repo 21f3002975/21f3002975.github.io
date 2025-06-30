@@ -37,7 +37,7 @@ As the world entered the era of reason and then computation, counting evolved ag
 </ul>
 
 In the 20th and 21st centuries, counting took on new forms through statistical physics and computer science. Combinatorics now powers everything from quantum state calculations to AI search algorithms, from data compression to genome sequencing.
-<br><br>
+
 
 ## Notation
 
@@ -100,7 +100,6 @@ Answering these two questions on order and repitition yields 4 separate categori
 ## A Short De-tour First
 
 Prior to getting into each counting problem and its solutions, let us take a quick detour and learn a powerful tool to solve counting problems in general. This is particularly useful in combinatorics. It is called the **Story Proof** !
-
 
 ### The Power of Story Proofs in Counting
 
@@ -175,7 +174,6 @@ And most importantly, it shows *why* the identity is true—not just *that* it i
 
 Story proofs like this are a central technique in combinatorics because they link **counting** to **context**. They turn numbers into narratives—and in doing so, reveal patterns that algebra alone might hide.
 
-
 ## The Big Four
 
 Now let us get back to the main focus of our article.
@@ -226,9 +224,8 @@ Now generalize this argument for \( k \) positions with \( n \) choices for each
   <li>\( n \times n \times \cdots \times n = n^k \)</li>
 </ul>
 
-Below is a simulation for illustration, go ahead tinker with it.
-
 <br><br>
+Below is a simulation for illustration, go ahead tinker with it.
 
 <iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
@@ -248,7 +245,6 @@ $$
 </p>
 Below is a simulation for illustration, go ahead tinker with it.
 
-<br><br>
 <iframe src="/visualizations/ordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 
@@ -268,7 +264,7 @@ Instead of thinking about *choosing items*, imagine we are **distributing \( k \
   <li>Since we can place multiple stars in the same bin, we're allowing <strong>repetition</strong> (i.e., selection with replacement).</li>
   <li>Since the stars are identical, we’re only interested in <strong>how many stars end up in each bin</strong>, not the order they were placed — making this <strong>unordered</strong>.</li>
 </ul>
-<br><br>
+
 This reframes our problem as:
 > In how many ways can we place \( k \) identical stars into \( n \) labeled bins?
 
@@ -316,12 +312,13 @@ $$
 50x + 20y + 10z + 5w = 100
 $$
 
-under the constraint that \( x, y, z, w \geq 0 \) and are integers. This is a **partitioning problem**, and while solving it exactly involves a bit more than stars and bars (because of coefficients), the underlying **counting structure** is very similar: you're **placing indistinct units (stars) into labeled bins (bill types), with repetition and without caring about order**.
+under the constraint that \( x, y, z, w \geq 0 \) and are integers. This is a **partitioning problem**, and while solving it exactly involves a bit more than stars and bars (because of coefficients), the underlying counting structure is very similar: you're placing indistinct units (stars) into labeled bins (bill types), with repetition and without caring about order.
 </p>
 
-Below is a simulation for illustration, go ahead tinker with it.
 
 <br><br>
+Below is a simulation for illustration, go ahead tinker with it.
+
 <iframe src="/visualizations/unordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 
@@ -336,7 +333,6 @@ Suppose you're forming a **committee of 3 people from a group of 10**. The key c
   <li>For the second, 9 remaining choices.</li>
   <li>For the third, 8 choices.</li>
 </ul>
-<br><br>
 
 <p>
   That gives us \( 10 \times 9 \times 8 = 720 \) different <strong>ordered</strong> outcomes. But in this committee scenario, choosing (Alice, Bob, Carol) is <strong>the same as</strong> (Carol, Bob, Alice) — they all lead to the same group of people. So these 720 outcomes <strong>overcount</strong> what we actually want.
@@ -375,9 +371,9 @@ This is called a **combination**, or more informally, **“n choose k”**.
 
 It gives the number of ways to choose \( k \) items from \( n \), **ignoring order and without replacement**.
 
-Check the simulator and tinker with it.
-
 <br><br>
+Check the given below simulator and tinker with it to better understand.
+
 <iframe src="/visualizations/unordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 
@@ -401,8 +397,6 @@ In short: **Before you can measure chance, you must know how to count.**
 <br><br>
 
 ---
-
-
 
 <span style="font-size: 0.9em; color: #555;">
 This content was developed and compiled as part of a learning project exploring foundational ideas in combinatorics and probability for the <em>Discrete Mathematics ES214</em> course at IIT Gandhinagar.<br>

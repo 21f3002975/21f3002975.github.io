@@ -228,6 +228,7 @@ Now generalize this argument for \( k \) positions with \( n \) choices for each
   <li>\( n \times n \times \cdots \times n = n^k \)</li>
 </ul>
 
+<br><br>
 **Below is a simulation for illustration, go ahead tinker with it.**
 <br><br>
 
@@ -320,7 +321,7 @@ $$
 
 under the constraint that \( x, y, z, w \geq 0 \) and are integers. This is a **partitioning problem**, and while solving it exactly involves a bit more than stars and bars (because of coefficients), the underlying counting structure is very similar: you're placing indistinct units (stars) into labeled bins (bill types), with repetition and without caring about order.
 </p>
-
+<br><br>
 **Below is a simulation for illustration, go ahead and try it**
 <br><br>
 
@@ -374,7 +375,7 @@ $$
 
 This is called a **combination**, or more informally, **“n choose k”**. It gives the number of ways to choose \( k \) items from \( n \), **ignoring order and without replacement**.
 
-
+<br><br>
 **Below is a simulation for illustration, go ahead and play around with it**
 <br><br>
 

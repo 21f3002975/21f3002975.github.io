@@ -336,8 +336,11 @@ Suppose you're forming a **committee of 3 people from a group of 10**. The key c
   <li>For the second, 9 remaining choices.</li>
   <li>For the third, 8 choices.</li>
 </ul>
+<br><br>
 
-<p>That gives us \( 10 \times 9 \times 8 = 720 \) different **ordered** outcomes. But in this committee scenario, choosing (Alice, Bob, Carol) is **the same as** (Carol, Bob, Alice) — they all lead to the same group of people. So these 720 outcomes **overcount** what we actually want. </p>
+<p>
+  That gives us \( 10 \times 9 \times 8 = 720 \) different <strong>ordered</strong> outcomes. But in this committee scenario, choosing (Alice, Bob, Carol) is <strong>the same as</strong> (Carol, Bob, Alice) — they all lead to the same group of people. So these 720 outcomes <strong>overcount</strong> what we actually want.
+</p>
 
 To correct for this, we need to ask:  
 > How many different ways can we reorder a single 3-person group?
@@ -356,7 +359,7 @@ In general, when choosing \( k \) items from \( n \), and:
   <li><strong>No item is reused</strong> (no replacement)</li>
 </ul>
 
-…we start with the total number of ordered selections (as in permutations), which is:
+We start with the total number of ordered selections (as in permutations), which is:
 
 $$
 \frac{n!}{(n - k)!}
@@ -399,7 +402,6 @@ In short: **Before you can measure chance, you must know how to count.**
 
 ---
 
-<br><br>
 
 
 <span style="font-size: 0.9em; color: #555;">

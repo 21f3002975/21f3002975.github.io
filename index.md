@@ -214,8 +214,12 @@ But before starting to solve it, spend a minute thinking of those two questions 
 The standard way of phrasing this set of counting problems is : in how many ways can I choose \( k \) items from \( n \) choices, when order matters and replacement is allowed?
 <br><br>
 Going back to our password example. We have 4 positions to fill from 10 choices: \( 0, 1, 2...9 \), and we can look at the choice for each position as an individual event with 10 different outcomes (corresponding to the 10 digits).
-- For position 1, we can thus count 10 possible outcomes.
-- What about for position 2? As our choice for position 1 is not consumed, we can choose the same digit again – or we can choose a different digit. We still have 10 possible outcomes – and we count these 10 outcomes for each different outcome from position 1.
+<ul>
+  <li>For position 1, we can thus count 10 possible outcomes.</li>
+  <li>
+    What about for position 2? As our choice for position 1 is not consumed, we can choose the same digit again – or we can choose a different digit. We still have 10 possible outcomes – and we count these 10 outcomes for each different outcome from position 1.
+  </li>
+</ul>
 <p>We can now write the overall \( 10 \times 10 \) ways of making a choice. Continuing this, we get \( 10^4 = 10,000 \) choices for the 4-digit PIN.</p>
 Now generalize this argument for \( k \) positions with \( n \) choices for each position. We are choosing \( k \) items from \( n \), and every item can be chosen again.
 
@@ -224,8 +228,8 @@ Now generalize this argument for \( k \) positions with \( n \) choices for each
   <li>\( n \times n \times \cdots \times n = n^k \)</li>
 </ul>
 
+**Below is a simulation for illustration, go ahead tinker with it.**
 <br><br>
-Below is a simulation for illustration, go ahead tinker with it.
 
 <iframe src="/visualizations/ordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
@@ -243,7 +247,9 @@ $$
 P(n, k) = \frac{n!}{(n - k)!} 
 $$
 </p>
-Below is a simulation for illustration, go ahead tinker with it.
+
+**Below is a simulation for illustration, go ahead play around with it.**
+<br><br>
 
 <iframe src="/visualizations/ordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
@@ -315,9 +321,8 @@ $$
 under the constraint that \( x, y, z, w \geq 0 \) and are integers. This is a **partitioning problem**, and while solving it exactly involves a bit more than stars and bars (because of coefficients), the underlying counting structure is very similar: you're placing indistinct units (stars) into labeled bins (bill types), with repetition and without caring about order.
 </p>
 
-
+**Below is a simulation for illustration, go ahead and try it**
 <br><br>
-Below is a simulation for illustration, go ahead tinker with it.
 
 <iframe src="/visualizations/unordered-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
@@ -367,12 +372,11 @@ $$
 \binom{n}{k} = \frac{n!}{k!(n - k)!}
 $$
 
-This is called a **combination**, or more informally, **“n choose k”**.
+This is called a **combination**, or more informally, **“n choose k”**. It gives the number of ways to choose \( k \) items from \( n \), **ignoring order and without replacement**.
 
-It gives the number of ways to choose \( k \) items from \( n \), **ignoring order and without replacement**.
 
+**Below is a simulation for illustration, go ahead and play around with it**
 <br><br>
-Check the given below simulator and tinker with it to better understand.
 
 <iframe src="/visualizations/unordered-no-replacement.html" width="100%" height="450" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
